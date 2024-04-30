@@ -1,3 +1,4 @@
+package Singleton;
 public class Singleton {
     private static Singleton uniqueInstance;
     // other useful instance variables here
