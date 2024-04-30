@@ -8,4 +8,8 @@ public class Singleton {
     }
     return uniqueInstance;
     }
+    public static void main(String[] args){
+        Singleton uniqueInstance = Singleton.getInstance();
+    System.out.println("Singleton: " + uniqueInstance);
+    }
 }
