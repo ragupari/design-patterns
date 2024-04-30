@@ -10,7 +10,12 @@ public class ChocolateBoiler {
         boiled = false;
         ChocolateBoiler uniqueInstance;
     }
-    public static ChocolateBoiler getInstance(){
+    public static synchronized ChocolateBoiler getInstance(){
+        /*By adding the synchronized keyword to
+        getInstance(), we force every thread to
+        wait its turn before it can enter the
+        method. That is, no two threads may
+        enter the method at the same time. */
         if (uniqueInstance == null) {
             uniqueInstance = new ChocolateBoiler();
             System.out.println("Created");
